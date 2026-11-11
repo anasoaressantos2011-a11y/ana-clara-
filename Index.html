@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Sabor da Casa - Livro de Receitas</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+
+  <!-- Cabeçalho -->
+  <header class="bg-gradient text-white text-center py-4 mb-4 shadow-sm" style="background: linear-gradient(135deg, #ff7e5f, #feb47b);">
+    <div class="container">
+      <h1 class="display-5 fw-bold">O Sabor da Casa</h1>
+      <p class="mb-0">Sua coleção de receitas práticas para o dia a dia</p>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+    
+    <!-- Menu de Navegação Oculto/Abas (Controla a exibição das páginas) -->
+    <ul class="nav nav-pills d-none" id="receitasTab" role="tablist">
+      <li class="nav-item">
+        <button class="nav-link active" id="inicio-tab" data-bs-toggle="tab" data-bs-target="#inicio" type="button">Início</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="bolo-tab" data-bs-toggle="tab" data-bs-target="#bolo" type="button">Bolo de Cenoura</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="pudim-tab" data-bs-toggle="tab" data-bs-target="#pudim" type="button">Pudim</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="crepioca-tab" data-bs-toggle="tab" data-bs-target="#crepioca" type="button">Crepioca</button>
+      </li>
+    </ul>
+
+    <!-- CONTEÚDO DAS PÁGINAS -->
+    <div class="tab-content" id="receitasTabContent">
+
+      <!-- PÁGINA PRINCIPAL (Listagem das Receitas) -->
+      <div class="tab-pane fade show active" id="inicio" role="tabpanel">
+        <h2 class="h3 fw-bold text-dark mb-4 border-bottom pb-2">Receitas em Destaque</h2>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden card-hover">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&q=80" class="card-img-top" alt="Bolo de Cenoura">
+              <div class="card-body d-flex flex-column">
+                <span class="badge bg-warning text-dark mb-2 align-self-start">Fácil • 40 min</span>
+                <h5 class="card-title fw-bold">Bolo de Cenoura Fofinho</h5>
+                <p class="card-text text-muted small">Aquele bolo tradicional de liquidificador com uma cobertura generosa de chocolate.</p>
+                <!-- Botão que abre a aba da receita -->
+                <button onclick="document.getElementById('bolo-tab').click()" class="btn btn-outline-danger mt-auto rounded-pill fw-semibold">Ver Receita Completa</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden card-hover">
+              <img src="https://images.unsplash.com/photo-1528975604071-b4dc52a2d18c?w=500&q=80" class="card-img-top" alt="Pudim">
+              <div class="card-body d-flex flex-column">
+                <span class="badge bg-info text-dark mb-2 align-self-start">Médio • 60 min</span>
+                <h5 class="card-title fw-bold">Pudim de Leite Condensado</h5>
+                <p class="card-text text-muted small">Cremoso, lisinho e com aquela calda de caramelo perfeita que todo mundo ama.</p>
+                <button onclick="document.getElementById('pudim-tab').click()" class="btn btn-outline-danger mt-auto rounded-pill fw-semibold">Ver Receita Completa</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden card-hover">
+              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80" class="card-img-top" alt="Crepioca Fit">
+              <div class="card-body d-flex flex-column">
+                <span class="badge bg-success mb-2 align-self-start">Muito Fácil • 15 min</span>
+                <h5 class="card-title fw-bold">Crepioca Recheada</h5>
+                <p class="card-text text-muted small">Uma opção leve, rápida e super saborosa para o seu café da manhã ou lanche.</p>
+                <button onclick="document.getElementById('crepioca-tab').click()" class="btn btn-outline-danger mt-auto rounded-pill fw-semibold">Ver Receita Completa</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DETALHES RECEITA 1: BOLO DE CENOURA -->
+      <div class="tab-pane fade" id="bolo" role="tabpanel">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 bg-white p-4 p-md-5 rounded-4 shadow-sm">
+            <button onclick="document.getElementById('inicio-tab').click()" class="btn btn-sm btn-outline-secondary rounded-pill mb-4">← Voltar para as receitas</button>
+            
+            <h1 class="fw-bold text-dark mb-3">Bolo de Cenoura Fofinho</h1>
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover mb-4" style="max-height: 300px;" alt="Bolo de Cenoura">
+
+            <div class="row text-center bg-light p-3 rounded-3 mb-4 g-2">
+              <div class="col-4"><strong>Tempo:</strong> 40 min</div>
+              <div class="col-4"><strong>Dificuldade:</strong> Fácil</div>
+              <div class="col-4"><strong>Rendimento:</strong> 8 porções</div>
+            </div>
+
+            <h3 class="fw-bold text-danger h5 mb-3">Ingredientes</h3>
+            <ul class="list-group list-group-flush small mb-4">
+              <li class="list-group-item">1/2 xícara (chá) de óleo</li>
+              <li class="list-group-item">3 cenouras médias raladas</li>
+              <li class="list-group-item">4 ovos inteiros</li>
+              <li class="list-group-item">2 xícaras (chá) de açúcar</li>
+              <li class="list-group-item">2 e 1/2 xícaras de farinha de trigo</li>
+              <li class="list-group-item">1 colher (sopa) de fermento em pó</li>
+            </ul>
+
+            <h3 class="fw-bold text-danger h5 mb-3">Modo de Preparo</h3>
+            <ol class="list-group list-group-numbered list-group-flush mb-4 small">
+              <li class="list-group-item">No liquidificador, bata a cenoura, os ovos e o óleo até homogeneizar.</li>
+              <li class="list-group-item">Acrescente o açúcar e bata por mais 5 minutos.</li>
+              <li class="list-group-item">Transfira para uma tigela, adicione a farinha de trigo aos poucos e misture bem.</li>
+              <li class="list-group-item">Por último, misture o fermento delicadamente. Asse a 180°C por 40 minutos.</li>
+            </ol>
+
+            <!-- Formulário de Comentários -->
+            <div class="border-top pt-4 mt-4">
+              <h4 class="fw-bold h5 mb-3">Deixe seu Comentário</h4>
+              <form onsubmit="event.preventDefault(); alert('Comentário enviado com sucesso!');">
+                <div class="mb-3">
+                  <label class="form-label small">Seu Nome:</label>
+                  <input type="text" class="form-control form-control-sm" placeholder="Digite seu nome" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label small">Comentário:</label>
+                  <textarea class="form-control form-control-sm" rows="3" placeholder="O que achou da receita?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger btn-sm rounded-pill px-4">Enviar Avaliação</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- DETALHES RECEITA 2: PUDIM -->
+      <div class="tab-pane fade" id="pudim" role="tabpanel">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 bg-white p-4 p-md-5 rounded-4 shadow-sm">
+            <button onclick="document.getElementById('inicio-tab').click()" class="btn btn-sm btn-outline-secondary rounded-pill mb-4">← Voltar para as receitas</button>
+            
+            <h1 class="fw-bold text-dark mb-3">Pudim de Leite Condensado</h1>
+            <img src="https://images.unsplash.com/photo-1528975604071-b4dc52a2d18c?w=800&q=80" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover mb-4" style="max-height: 300px;" alt="Pudim">
+
+            <div class="row text-center bg-light p-3 rounded-3 mb-4 g-2">
+              <div class="col-4"><strong>Tempo:</strong> 60 min</div>
+              <div class="col-4"><strong>Dificuldade:</strong> Médio</div>
+              <div class="col-4"><strong>Rendimento:</strong> 8 porções</div>
+            </div>
+
+            <h3 class="fw-bold text-danger h5 mb-3">Ingredientes</h3>
+            <ul class="list-group list-group-flush small mb-4">
+              <li class="list-group-item">1 lata de leite condensado</li>
+              <li class="list-group-item">2 latas de leite (medida da lata de leite condensado)</li>
+              <li class="list-group-item">3 ovos inteiros</li>
+              <li class="list-group-item">1 xícara (chá) de açúcar (para a calda)</li>
+            </ul>
+
+            <h3 class="fw-bold text-danger h5 mb-3">Modo de Preparo</h3>
+            <ol class="list-group list-group-numbered list-group-flush mb-4 small">
+              <li class="list-group-item">Derreta o açúcar na panela até virar calda e espalhe na forma.</li>
+              <li class="list-group-item">Bata no liquidificador o leite condensado, o leite e os ovos por 3 minutos.</li>
+              <li class="list-group-item">Despeje na forma caramelizada e asse em banho-maria por 45 minutos a 180°C.</li>
+            </ol>
+
+            <div class="border-top pt-4 mt-4">
+              <h4 class="fw-bold h5 mb-3">Deixe seu Comentário</h4>
+              <form onsubmit="event.preventDefault(); alert('Comentário enviado com sucesso!');">
+                <div class="mb-3">
+                  <label class="form-label small">Seu Nome:</label>
+                  <input type="text" class="form-control form-control-sm" placeholder="Digite seu nome" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label small">Comentário:</label>
+                  <textarea class="form-control form-control-sm" rows="3" placeholder="O que achou da receita?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger btn-sm rounded-pill px-4">Enviar Avaliação</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- DETALHES RECEITA 3: CREPIOCA -->
+      <div class="tab-pane fade" id="crepioca" role="tabpanel">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 bg-white p-4 p-md-5 rounded-4 shadow-sm">
+            <button onclick="document.getElementById('inicio-tab').click()" class="btn btn-sm btn-outline-secondary rounded-pill mb-4">← Voltar para as receitas</button>
+            
+            <h1 class="fw-bold text-dark mb-3">Crepioca Recheada</h1>
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover mb-4" style="max-height: 300px;" alt="Crepioca">
+
+            <div class="row text-center bg-light p-3 rounded-3 mb-4 g-2">
+              <div class="col-4"><strong>Tempo:</strong> 15 min</div>
+              <div class="col-4"><strong>Dificuldade:</strong> Muito Fácil</div>
+              <div class="col-4"><strong>Rendimento:</strong> 1 porção</div>
+            </div>
+
+            <h3 class="fw-bold text-danger h5 mb-3">Ingredientes</h3>
+            <ul class="list-group list-group-flush small mb-4">
+              <li class="list-group-item">1 ovo inteiro</li>
+              <li class="list-group-item">2 colheres (sopa) de goma de tapioca</li>
+              <li class="list-group-item">Uma pitada de sal</li>
+              <li class="list-group-item">Queijo ralado ou recheio da sua preferência</li>
+            </ul>
+
+            <h3 class="fw-bold text-danger h5 mb-3">Modo de Preparo</h3>
+            <ol class="list-group list-group-numbered list-group-flush mb-4 small">
+              <li class="list-group-item">Bata o ovo com a tapioca e o sal usando um garfo.</li>
+              <li class="list-group-item">Despeje em uma frigideira antiaderente aquecida.</li>
+              <li class="list-group-item">Quando soltar, vire, adicione o recheio e dobre ao meio.</li>
+            </ol>
+
+            <div class="border-top pt-4 mt-4">
+              <h4 class="fw-bold h5 mb-3">Deixe seu Comentário</h4>
+              <form onsubmit="event.preventDefault(); alert('Comentário enviado com sucesso!');">
+                <div class="mb-3">
+                  <label class="form-label small">Seu Nome:</label>
+                  <input type="text" class="form-control form-control-sm" placeholder="Digite seu nome" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label small">Comentário:</label>
+                  <textarea class="form-control form-control-sm" rows="3" placeholder="O que achou da receita?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger btn-sm rounded-pill px-4">Enviar Avaliação</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-auto">
+    <div class="container">
+      <p class="mb-0 small">Projeto de Interfaces Web I - Desenvolvido com Bootstrap 5</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
